@@ -1,0 +1,195 @@
+.display_none {
+    display: none;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+header {
+    background-color: #000000c0;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+}
+
+.header-text a {
+    text-decoration: none;
+    font-family: "blanket", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #fff;
+    position: fixed;
+    top: 22px;
+    left: 70px;
+    cursor: pointer;
+}
+
+.hamburguer_menu-button {
+    cursor: pointer;
+    position: fixed;
+    border: 2px solid #800080;
+    background-color: #000;
+    color: #fff;
+    font-size: 2rem;
+    top: 20px;
+    left: 20px;
+    border-radius: 10px;
+    width: 40px;
+    height: fit-content;
+    text-shadow: var(--basic-shadow);
+    text-align: center;
+}
+
+.hamburger_menu-container {
+    background-color: #000000b6;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.hamburger_menu-panel {
+    width: 225px;
+    height: 100vh;
+    box-shadow: 0 0 0 1px #800080, 0 0 0 3px #fff;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hamburger_menu-nav {
+    top: 100px;
+    left: 20px;
+    position: fixed;
+}
+
+.main_nav-item {
+    margin-bottom: 20px;
+}
+
+.main_nav {
+    width: 100vw;
+    top: 17px;
+    position: fixed;
+}
+
+.main_nav ul {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+.main_nav-item::before {
+    content: "//";
+    margin-right: .5rem;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    top: 2px;
+    font-weight: bold;
+    text-shadow: -3px 1px #800080;
+}
+
+.main_nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+}
+
+.main_nav-link:hover {
+    color: #800080;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow:
+        1px 1px #fff,
+        1px 2px #fff,
+        1px -1px #fff,
+        1px -2px #fff,
+        2px 1px #fff,
+        2px 2px #fff,
+        2px -1px #fff,
+        2px -2px #fff,
+        -1px -1px #fff,
+        -1px -2px #fff,
+        -1px 1px #fff,
+        -1px 2px #fff,
+        -2px -1px #fff,
+        -2px -2px #fff,
+        -2px 1px #fff,
+        -2px 2px #fff;
+}
+
+.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 8px;
+    bottom: -1px;
+    width: 100%;
+    height: 6px;
+    background-color: #800080;
+    border-radius: 2px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.active:hover::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -2px;
+    width: calc(100% + 10px);
+    height: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.active:active {
+    color: #fff;
+    z-index: 2;
+    text-shadow: none;
+}
+
+.active:active::before {
+    background-color: #800080;
+}
+
+@media screen and (min-width: 600px) {
+    .hamburguer_menu-button {
+        left: 40px;
+    }
+
+    .header-text a {
+        left: 90px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .hamburguer_menu-button {
+        display: none;
+    }
+
+    .header-text a {
+        left: 40px;
+    }
+
+    .main_nav {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,34 @@
+@import "header.css";
+@import "cover.css";
+@import "about.css";
+@import "contact.css";
+
+:root {
+    --basic-shadow: -1px 1px 0 #800080, -2px 2px 0 #800080;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+.section_default {
+    padding: 40px 20px 0px 20px;
+    width: 100%;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+@media screen and (min-width: 600px) {
+    .section_default {
+        padding: 40px 40px 0px 40px;
+    }
+}
